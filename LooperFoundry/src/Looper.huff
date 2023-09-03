@@ -16,7 +16,7 @@
 }
 
 
-// #define fn DOSTUFF() = takes (2) returns (2) {}
+#define fn DOSTUFF() = takes (2) returns (2) {}
 
 #define macro LOOP() = takes(0) returns(0) {
     0x64    // [100]
