@@ -1,0 +1,35 @@
+#define function loop() view returns(uint256 i)
+
+#define macro MAIN() = takes(0) returns(0) {
+
+    // Get the function selector
+    0x00
+    calldataload
+    0xE0
+    shr
+
+    // Jump to the implementation of the loop function if the calldata matches the function selector
+    __FUNC_SIG(loop) eq loop jumpi
+    
+    loop:
+        LOOP()
+}
+
+
+// #define fn DOSTUFF() = takes (2) returns (2) {}
+
+#define macro LOOP() = takes(0) returns(0) {
+    0x64    // [100]
+    0x00    // [i,100]
+    compare:
+    dup2 dup2 // [i,100,i,100]
+    eq exit jumpi // [i,100]
+   // DOSTUFF() // [i,100]
+    0x01 add // [i+1,100]
+    compare jump
+    exit: // [i,100]
+    swap1 // [100,i]
+    pop // [i]
+    0x00 mstore // place the result in memory         
+    0x20 0x00 return      // return the result
+}
