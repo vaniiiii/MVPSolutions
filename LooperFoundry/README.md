@@ -7,7 +7,7 @@ Bonus points if you can lower it to 24.655 or less.
 
 ## Solution
 
-Huff. I tried different tricks inside solidity(avoiding overflow checks, external payable modifiers) but didn't work. If doStuff(i) is not planned to be changed simply commenting it out works because code boiled down increments i from 0 to 99. 
+Huff. I tried different tricks inside solidity(avoiding overflow checks, external payable modifiers) but didn't work. If doStuff(i) is not planned to be changed simply commenting it out works because code boiled down increments i from 0 to 100. 
 
 This was a super fun task because writing Huff helped me understand the EVM better, even though this code was not complex.
 
