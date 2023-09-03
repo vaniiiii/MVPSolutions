@@ -19,6 +19,10 @@ In StakingContractBytes nested mapping `mapping(address => mapping(uint256 => by
 
 Why two solutions? In my initial one, which is none of these, uint256 were used for struct fields. Then I wanted to optimize gas consumption and decided to pack all data into single slot. I also realized that I can avoid using structs and arrays, so I wrote the bytes32 solution which is more gas-efficient.
 
+### Verified contracts
+https://sepolia.etherscan.io/address/0xac158bd90df4088deadbde55eb8ddd92f9da67ff
+https://sepolia.etherscan.io/address/0xe40c06eb4409949eeb49a748a0bed74b21967800
+
 ---
 
 ### Assumptions:
