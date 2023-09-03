@@ -24,7 +24,7 @@
     compare:
     dup2 dup2 // [i,100,i,100]
     eq exit jumpi // [i,100]
-   // DOSTUFF() // [i,100]
+    DOSTUFF() // [i,100]
     0x01 add // [i+1,100]
     compare jump
     exit: // [i,100]
