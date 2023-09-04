@@ -42,5 +42,5 @@ function loop() external payable {
 
 
 ```shell
-forge test
+npx hardhat test
 ```
